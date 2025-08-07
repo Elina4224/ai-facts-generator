@@ -7,16 +7,19 @@
     <title>Poem Generator</title>
 </head>
 <body>
+    <div class="container">
 <header>
 <h1>Welcome to a poem generator</h1>   
 </header>
 
 <main>
     <form>
-        <input type="text" placeholder="Enter the topic of the poem" autofocus required autocomplete="off"/>
-        <input type="Submit" />
+        <input type="text" placeholder="Enter the topic of the poem" 
+        autofocus required autocomplete="off"
+        class="instructions"/>
+        <input type="Submit" class="submit-button" />
     </form>
-    <div>
+    <div class="poem">
         Poem text here 
         <br />
         Poem text here 
@@ -31,6 +34,7 @@ This project is coded by
 <a href="https://poem-generator-el.netlify.app/" target="_blank">Netlify</a>
 
 </footer>
+</div>
 
 <script src="src/index.js"></script>
 </body>
