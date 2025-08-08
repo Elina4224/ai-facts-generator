@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/index.css" />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <title>Poem Generator</title>
 </head>
 <body>
@@ -13,17 +14,14 @@
 </header>
 
 <main>
-    <form>
+    <form id="poem-generator-form">
         <input type="text" placeholder="Enter the topic of the poem" 
         autofocus required autocomplete="off"
         class="instructions"/>
         <input type="Submit" class="submit-button" />
     </form>
-    <div class="poem">
-        Poem text here 
-        <br />
-        Poem text here 
-    </div>
+    <div class="poem" id="poem"></div>
+    
 </main>
  
 

@@ -1,11 +1,16 @@
 body {
-    background-color: lightseagreen;
+    background-color: rgb(253, 178, 170);
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
     margin: 120px;
     max-width: 600px; 
+    
+}
+
+a {
+    color: #885df1;
 }
 
 header {
@@ -13,6 +18,7 @@ header {
 }
 
 h1 {
+    text-align: center;
     font-weight: 800;
     font-size: 36px;
     line-height: 1.5;
@@ -40,7 +46,7 @@ form {
 
 .submit-button {
     margin-left: 10px;
-    background: darkgray;
+    background: #885df1;
     color: white;
     border: none;
     width: 150px;
@@ -53,8 +59,8 @@ form {
     font-size: 16px;
     background-color: #ffff;
     padding: 20px;
-    line-height: 2x;
-    border-left: 3px solid #885dfl;
+    line-height: 2;
+    border-left: 3px solid #885df1;
     box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
 }
 
