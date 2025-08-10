@@ -1,7 +1,13 @@
 function displayPoem(response) {
-  new Typewriter("#poem", {
-    strings: response.data.answer,
+  let poemElement = document.querySelector("#poem");
+  poemElement.innerHTML = ""; // clear old text
 
+  let cleanedText = response.data.answer
+    .replace(/```html/g, "")
+    .replace(/```/g, "");
+
+  new Typewriter("#poem", {
+    strings: cleanedText,
     autoStart: true,
     delay: 1,
     cursor: "",
@@ -18,6 +24,9 @@ function generatePoem(event) {
   let prompt = `Generate a poem about ${instructionsInput.value}`;
   let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
+  let poemElement = document.querySelector("#poem");
+  poemElement.classList.remove("hidden");
+  poemElement.innerHTML = `<div class="blink">Generating a poem about ${instructionsInput.value}</div>`;
   axios.get(apiURL).then(displayPoem);
 }
 
